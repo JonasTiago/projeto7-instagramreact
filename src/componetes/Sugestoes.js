@@ -1,4 +1,25 @@
-function Sugestao() {
+function Sugestao(props) {
+
+  return (
+    <div>
+        <div class="sugestao">
+          <div class="usuario">
+            <img src={props.imagem} />
+            <div class="texto">
+              <div class="nome">{props.nome}</div>
+              <div class="razao">{props.razao}</div>
+            </div>
+          </div>
+
+          <div class="seguir">Seguir</div>
+        </div> 
+    </div>
+  )
+}
+
+
+export default function Sugestoes() {
+
   const props = [
     {
       imagem: "assets/img/bad.vibes.memes.svg",
@@ -28,38 +49,12 @@ function Sugestao() {
   ]
 
   return (
-
-    <div>
-      {props.map((item) =>
-        <div class="sugestao">
-          <div class="usuario">
-            <img src={item.imagem} />
-            <div class="texto">
-              <div class="nome">{item.nome}</div>
-              <div class="razao">{item.razao}</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
-      )}
-    </div>
-
-
-  )
-}
-
-
-export default function Sugestoes() {
-  return (
     <div class="sugestoes">
       <div class="titulo">
         Sugestões para você
         <div>Ver tudo</div>
       </div>
-
-      <Sugestao />
-      
+      {props.map((item) => <Sugestao imagem={item.imagem} nome={item.nome} razao={item.razao}/>)} 
     </div>
   )
 }
