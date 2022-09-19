@@ -48,7 +48,7 @@ function ConteudoPost(props) {
       <div class="fundo">
         <div class="acoes">
           <div>
-            <ion-icon name={curtida} onClick={foiCurtido} ></ion-icon>
+            <ion-icon name={curtida} onClick={foiCurtido} class={curtida}></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>

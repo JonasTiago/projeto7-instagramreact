@@ -222,6 +222,10 @@ body {
   margin-right: 10px;
 }
 
+.heart{
+  color: red;
+}
+
 .post:last-child {
   margin-bottom: 18px;
 }
